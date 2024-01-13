@@ -30,57 +30,36 @@ The Payment Service is a Spring Boot application providing RESTful endpoints for
 
 ### Installation
 
-1. Clone the repository by using this command:
-   git clone https://github.com/aboukham/payment-api
+ 1. Clone the repository by using this command:
+    ```bash
+    git clone https://github.com/aboukham/payment-api
+    ```
 
-2. Navigate to the project directory by using this commands:
-   cd payment-api
-   cd server
-   Then open this diroctory in your IDE
-3. Run the application by clicking the run icon on your IDE or use this command:
-   java -jar target/payment-api.jar
-   
-## Usage
+ 2. Navigate to the project directory by using this commands:
+   ```bash
+    cd payment-api
+    cd server
+   ```
+    Then open this diroctory in your IDE
+ 3. Run the application by clicking the run icon on your IDE or use this command:
+    ```bash
+    java -jar target/payment-api.jar
+    ```
 
-### Endpoints
-1. Create Payment and send notification to customer:
-  URL: POST http://localhost:8080/api/payment/create?email={customerEmail}
-  Request Body: {"id":1 "amount": 100.0 }
-2. Return Payment and send notification to customer:
- URL: POST http://localhost:8080/api/payment/create?email={customerEmail}
-  Request Body: {"id":1 "amount": 100.0 }
-Get Payment Status:
-URL:  GET http://localhost:8080/api/payment/{id}
+ ## Usage
 
+ ### Endpoints
+ 
+ 1. `POST /api/payment/create?email={customerEmail}, PAYLOAD={"id":1, "amount": 100.0}`: Create a payment and send a notification to the customer.
+
+ 2. `PUT /api/payment/return?email={customerEmail}, PAYLOAD={"id":1, "amount": 100.0}`: Return a payment and send notification to the customer.
+
+ 3. `GET /api/payment/{id}`: Get the payment status.
+
+    
 ## Project Structure
 
-payment-api
-|- server
-|-- src
-|   |-- main
-|       |-- java
-|           |-- com.example.paymentAPI
-|               |-- advice(Exception handling)
-|               |-- aop (messaging, logging, monitoring)
-|               |-- controller
-|               |-- dao
-|               |-- domain
-|               |-- dto
-|               |-- service
-|               |-- PaymentApiApplication
-|-- resources
-|-- test
-
-|- client(Testing the API using RestTemplate)
-|-- src
-|   |-- main
-|       |-- java
-|           |-- com.example.PaymentApiClient
-|               |-- PaymentApiClientApplication
-|               |-- PaymentDto
-|               |-- RestTemplateConfig
-|-- resources
-|-- test
+![project structure](./project-structure.jpeg)
 
 ## Dependencies
 
@@ -100,6 +79,5 @@ Connect to h2 database: check the application.properties file inside ressources 
 Used Spring actuator, ObservationHandeler and Observation Registry to log the execution time of each method in the service. Allowing all actuator endpoints in application.properties file provides all the information about the service.
 
 ## Testing
-
 For testing you can use postman and send the above endpoints woth your input or open the client folder on IDE and run it, you will see the result of some test cases provided in this service to test all features.
 
