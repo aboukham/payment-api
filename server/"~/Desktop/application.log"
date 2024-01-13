@@ -1,0 +1,66 @@
+2024-01-13T00:31:23.110-06:00  INFO 13461 --- [main] c.e.PaymentAPI.PaymentApiApplication     : Starting PaymentApiApplication using Java 19.0.1 with PID 13461 (/Users/aabdelaziz/Downloads/PaymentAPI/target/classes started by aabdelaziz in /Users/aabdelaziz/Downloads/PaymentAPI)
+2024-01-13T00:31:23.113-06:00  INFO 13461 --- [main] c.e.PaymentAPI.PaymentApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-01-13T00:31:24.177-06:00  INFO 13461 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-13T00:31:24.260-06:00  INFO 13461 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interface.
+2024-01-13T00:31:25.409-06:00  INFO 13461 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-13T00:31:25.424-06:00  INFO 13461 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-13T00:31:25.424-06:00  INFO 13461 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-13T00:31:25.486-06:00  INFO 13461 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-13T00:31:25.486-06:00  INFO 13461 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2315 ms
+2024-01-13T00:31:25.776-06:00  INFO 13461 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-13T00:31:25.977-06:00  INFO 13461 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentDb user=API
+2024-01-13T00:31:25.978-06:00  INFO 13461 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-13T00:31:25.991-06:00  INFO 13461 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentDb'
+2024-01-13T00:31:26.323-06:00  INFO 13461 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-13T00:31:26.377-06:00  INFO 13461 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-13T00:31:26.410-06:00  INFO 13461 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-13T00:31:26.637-06:00  INFO 13461 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-13T00:31:27.477-06:00  INFO 13461 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-13T00:31:27.511-06:00  INFO 13461 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13T00:31:28.174-06:00  WARN 13461 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-13T00:31:29.800-06:00  INFO 13461 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-01-13T00:31:29.885-06:00  INFO 13461 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-13T00:31:29.901-06:00  INFO 13461 --- [main] c.e.PaymentAPI.PaymentApiApplication     : Started PaymentApiApplication in 7.343 seconds (process running for 7.838)
+2024-01-13T00:32:53.604-06:00  INFO 13461 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-13T00:32:53.605-06:00  INFO 13461 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-13T00:32:53.607-06:00  INFO 13461 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-13T00:32:53.618-06:00  INFO 13461 --- [http-nio-8080-exec-2] c.e.P.aop.PerformanceTrackerHandler      : Execution started...
+2024-01-13T00:32:53.722-06:00  INFO 13461 --- [http-nio-8080-exec-2] c.e.P.aop.PerformanceTrackerHandler      : Execution started...
+2024-01-13T00:32:53.852-06:00  INFO 13461 --- [http-nio-8080-exec-2] c.e.P.aop.PerformanceTrackerHandler      : Execution stopped create.payment duration 130
+2024-01-13T00:33:00.512-06:00  INFO 13461 --- [http-nio-8080-exec-2] c.e.P.aop.PerformanceTrackerHandler      : Execution stopped http.server.requests duration 6894
+2024-01-13T00:35:58.019-06:00  INFO 13461 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13T00:35:58.025-06:00  INFO 13461 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-13T00:35:58.028-06:00  INFO 13461 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-13T00:36:00.115-06:00  INFO 13535 --- [main] c.e.PaymentAPI.PaymentApiApplication     : Starting PaymentApiApplication using Java 19.0.1 with PID 13535 (/Users/aabdelaziz/Downloads/PaymentAPI/target/classes started by aabdelaziz in /Users/aabdelaziz/Downloads/PaymentAPI)
+2024-01-13T00:36:00.117-06:00  INFO 13535 --- [main] c.e.PaymentAPI.PaymentApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-01-13T00:36:01.098-06:00  INFO 13535 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-13T00:36:01.158-06:00  INFO 13535 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2024-01-13T00:36:02.195-06:00  INFO 13535 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-13T00:36:02.211-06:00  INFO 13535 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-13T00:36:02.211-06:00  INFO 13535 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-13T00:36:02.270-06:00  INFO 13535 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-13T00:36:02.270-06:00  INFO 13535 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2099 ms
+2024-01-13T00:36:02.584-06:00  INFO 13535 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-13T00:36:02.790-06:00  INFO 13535 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentDb user=API
+2024-01-13T00:36:02.791-06:00  INFO 13535 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-13T00:36:02.804-06:00  INFO 13535 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentDb'
+2024-01-13T00:36:03.151-06:00  INFO 13535 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-13T00:36:03.204-06:00  INFO 13535 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-13T00:36:03.238-06:00  INFO 13535 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-13T00:36:03.477-06:00  INFO 13535 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-13T00:36:04.288-06:00  INFO 13535 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-13T00:36:04.323-06:00  INFO 13535 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13T00:36:04.991-06:00  WARN 13535 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-13T00:36:06.530-06:00  INFO 13535 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-01-13T00:36:06.615-06:00  INFO 13535 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-13T00:36:06.631-06:00  INFO 13535 --- [main] c.e.PaymentAPI.PaymentApiApplication     : Started PaymentApiApplication in 7.083 seconds (process running for 7.559)
+2024-01-13T00:37:04.035-06:00  INFO 13535 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-13T00:37:04.035-06:00  INFO 13535 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-13T00:37:04.037-06:00  INFO 13535 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-13T00:37:04.047-06:00  INFO 13535 --- [http-nio-8080-exec-1] c.e.P.aop.PerformanceTrackerHandler      : Execution started...
+2024-01-13T00:37:04.151-06:00  INFO 13535 --- [http-nio-8080-exec-1] c.e.P.aop.PerformanceTrackerHandler      : Execution started...
+2024-01-13T00:37:04.261-06:00  INFO 13535 --- [http-nio-8080-exec-1] c.e.P.aop.PerformanceTrackerHandler      : Execution stopped create.payment duration 110
+2024-01-13T00:37:10.789-06:00  INFO 13535 --- [http-nio-8080-exec-1] c.e.P.aop.PerformanceTrackerHandler      : Execution stopped http.server.requests duration 6742
+2024-01-13T00:38:36.235-06:00  INFO 13535 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13T00:38:36.241-06:00  INFO 13535 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-13T00:38:36.244-06:00  INFO 13535 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
