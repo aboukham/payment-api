@@ -31,26 +31,30 @@ The Payment Service is a Spring Boot application providing RESTful endpoints for
 ### Installation
 
 1. Clone the repository by using this command:
+   ```bash
    git clone https://github.com/aboukham/payment-api
+   ```
 
 2. Navigate to the project directory by using this commands:
+  ```bash
    cd payment-api
    cd server
+  ```
    Then open this diroctory in your IDE
-3. Run the application by clicking the run icon on your IDE or use this command:
+4. Run the application by clicking the run icon on your IDE or use this command:
+   ```bash
    java -jar target/payment-api.jar
+   ```
    
 ## Usage
 
 ### Endpoints
-1. Create Payment and send notification to customer:
-  URL: POST http://localhost:8080/api/payment/create?email={customerEmail}
-  Request Body: {"id":1 "amount": 100.0 }
-2. Return Payment and send notification to customer:
- URL: POST http://localhost:8080/api/payment/create?email={customerEmail}
-  Request Body: {"id":1 "amount": 100.0 }
-Get Payment Status:
-URL:  GET http://localhost:8080/api/payment/{id}
+1. `POST /api/payment/create?email={customerEmail}, PAYLOAD={"id":1, "amount": 100.0}`: Create a payment and send a notification to the customer.
+
+2. `POST /api/payment/create?email={customerEmail}, PAYLOAD={"id":1, "amount": 100.0}`: Return a payment and send notification to the customer.
+
+3. `GET /api/payment/{id}`: Get the payment status.
+
 
 ## Project Structure
 
@@ -101,5 +105,5 @@ Used Spring actuator, ObservationHandeler and Observation Registry to log the ex
 
 ## Testing
 
-For testing you can use postman and send the above endpoints woth your input or open the client folder on IDE and run it, you will see the result of some test cases provided in this service to test all features.
+You can use postman to test the endpoints, or open the client folder on IDE and run it, you will see the results of some test cases provided in this service to test all features.
 
